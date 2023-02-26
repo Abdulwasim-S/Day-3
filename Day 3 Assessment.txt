@@ -1,0 +1,89 @@
+1. For the given JSON iterate over all for loops(for,for in,for of,forEach)
+
+	//using for loop;
+    	var json=`{"name":"Wasim",
+		"age":22,
+		"state":"TamilNadu"}`;
+	var obj=JSON.parse(json);
+	for(var key in obj){
+		console.log(`${key}:${obj[key]}`)
+	}
+
+	//using for in loop;
+	var json={"name":"Wasim",
+		"age":22,
+		"state":"TamilNadu"};
+
+	for(var key in json){
+		console.log(`${key} : ${json[key]}`)
+	}
+
+	//using for of loop;
+	var json=`{"name":"Wasim",
+		"age":22,
+		"state":"TamilNadu"}`;
+	var obj=JSON.parse(json);
+	for(var [key,value] of Object.entries(obj)){
+		console.log(`${key}:${obj[key]}`)
+	}
+	//using forEach loop;
+	var json={"name":"Wasim",
+		"age":22,
+		"state":"TamilNadu"};
+	Object.entries(json).forEach(( [key,value]) =>{
+		console.log(`${key}:${json[key]}`)
+	});
+
+2. Create your own resume data in JSON format
+
+{
+  "basics": {
+    "name": "Abdulwasim",
+    "label": "Mechanical Engineer",
+    "image": "",
+    "email": "abdulwasimsmech@gmail.com",
+    "phone": "(+91) 87783-54776",
+    "url": "",
+    "summary": "Im an Mechanical Engineer and intrested in programming and also an optimistic minded smart hardworker.",
+    "location": {
+      "address": "4/459/A Kokkarayan pettai",
+      "postalCode": "638007",
+      "city": "Namakkal",
+      "countryCode": "Asia",
+      "region": "India"
+    },
+  "education": [{
+    "institution": "Mahendra Institute of Technology",
+    "url": "https://www.mahendrainstituteoftechnology.com/",
+    "area": "Mechanical Engineering",
+    "studyType": "Bachelor",
+    "startDate": "2018-09-05",
+    "endDate": "2022-08-08",
+    "score": "8.43",
+  }],
+  "awards": [{
+    "title": "Interschool Kabaddi Winner",
+    "year": "2016",
+    "awarder": "VIB matric school",
+  }],
+  "skills": [{
+    "name": "Web Development",
+    "level": "Intermediate",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Core Java"
+    ]
+  }],
+  "languages": [{
+    "language": "Tamil",
+    "fluency": "Native speaker"
+  }],
+  "interests": [{
+    "name": "Programming",
+    "keywords": "Problem Solving"
+  }],
+}}
+
+
